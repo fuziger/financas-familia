@@ -25,6 +25,10 @@ st.subheader("Lançamento de Gastos")
 
 with st.form("form_gastos", clear_on_submit=True):
     data = st.date_input("Data", datetime.now())
+    
+    # --- NOVO CAMPO: USUÁRIO ---
+    usuario = st.selectbox("Quem está lançando?", ["Rafael", "Pamela", "Veronica", "Silvio"])
+    
     valor = st.number_input("Valor (R$)", min_value=0.0, step=0.01, format="%.2f")
     categoria = st.selectbox("Categoria", [
         "Mercado", 
@@ -43,10 +47,10 @@ if submit:
     if valor > 0:
         try:
             sheet = conectar_planilha()
-            # Prepara a linha para inserir (Data formatada, Categoria, Valor, Descrição)
-            nova_linha = [data.strftime("%d/%m/%Y"), categoria, valor, descricao]
+            # Prepara a linha para inserir (Data, Usuário, Categoria, Valor, Descrição)
+            nova_linha = [data.strftime("%d/%m/%Y"), usuario, categoria, valor, descricao]
             sheet.append_row(nova_linha)
-            st.success("✅ Lançamento salvo com sucesso!")
+            st.success(f"✅ Lançamento de {usuario} salvo com sucesso!")
         except Exception as e:
             st.error(f"Erro ao salvar: {e}")
     else:
