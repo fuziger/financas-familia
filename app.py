@@ -36,7 +36,7 @@ if pagina == "Lançar Gastos":
         descricao = st.text_input("Descrição")
         if st.form_submit_button("Salvar Gasto"):
             if valor > 0:
-                aba = conectar_planilha("Página1") # Verifique se o nome da aba de gastos é este
+                aba = conectar_planilha("Gastos") # Verifique se o nome da aba de gastos é este
                 aba.append_row([data.strftime("%d/%m/%Y"), usuario, categoria, valor, descricao])
                 st.success("Gasto registrado!")
             else:
