@@ -87,7 +87,7 @@ else:
     st.header("📊 Análise de Saldo Familiar")
     
     try:
-        df_gastos = pd.DataFrame(conectar_planilha("Página1").get_all_records())
+        df_gastos = pd.DataFrame(conectar_planilha("Gastos").get_all_records())
         df_receitas = pd.DataFrame(conectar_planilha("Receitas").get_all_records())
         df_reserva = pd.DataFrame(conectar_planilha("Reserva de Emergência").get_all_records())
 
