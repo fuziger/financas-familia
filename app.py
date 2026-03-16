@@ -19,7 +19,7 @@ def conectar_planilha(aba_nome):
 st.sidebar.title("Menu Principal")
 pagina = st.sidebar.radio("Ir para:", ["Dashboard de Análise", "Lançar Gastos", "Lançar Receitas"])
 
-usuarios = ["Rafael", "Pamela", "Isabeli" "Veronica", "Silvio"]
+usuarios = ["Rafael", "Pamela", "Isabeli", "Veronica", "Silvio"]
 
 # --- PÁGINA: LANÇAR GASTOS ---
 if pagina == "Lançar Gastos":
