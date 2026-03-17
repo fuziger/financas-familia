@@ -21,7 +21,7 @@ pagina = st.sidebar.radio("Ir para:", ["Dashboard de Análise", "Lançar Gastos"
 
 usuarios = ["Rafael", "Pamela", "Veronica", "Silvio"]
 # Categorias atualizadas para bater com as metas
-categorias_gastos = ["Mercado", "Combustível", "Lanches", "Emergências", "Saúde", "Educação", "Moradia", "Lazer", "Outros"]
+categorias_gastos = ["Mercado", "Combustível", "Manutenção do Carro", "Lanches", "Emergências", "Saúde", "Educação", "Moradia", "Lazer", "Outros"]
 
 # --- PÁGINA: LANÇAR GASTOS ---
 if pagina == "Lançar Gastos":
